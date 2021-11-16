@@ -77,10 +77,7 @@ public class ExcelToSqlite {
 					stat.close();
 				}
 			}
-		} catch (InvalidFormatException e) {
-			System.out.println("an error occured. please check \"err.txt\" for additional information.");
-			e.printStackTrace(System.err);
-		} catch (IOException e) {
+		} catch (InvalidFormatException | IOException e) {
 			System.out.println("an error occured. please check \"err.txt\" for additional information.");
 			e.printStackTrace(System.err);
 		}
