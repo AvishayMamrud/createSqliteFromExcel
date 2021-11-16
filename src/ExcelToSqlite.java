@@ -1,21 +1,17 @@
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
-import org.apache.poi.ss.usermodel.CellType;
-import org.apache.poi.ss.usermodel.DateUtil;
 import org.apache.poi.xssf.usermodel.*;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.PrintStream;
-import java.nio.file.Files;
-import java.nio.file.Paths;
 import java.sql.*;
 import org.sqlite.JDBC;
 import org.sqlite.SQLiteConfig;
 
 public class ExcelToSqlite {
     
-    String dbName;
+    String dbName = "db.db";
     
     public static void main(String[] args) throws SQLException {
         if(args.length > 0 && args[0].endsWith(".xlsx")) {
